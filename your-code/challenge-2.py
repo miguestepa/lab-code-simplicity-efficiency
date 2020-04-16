@@ -7,13 +7,16 @@ The code is functional but has a lot of room for improvement. Use what you have 
 about simple and efficient code, refactor the code.
 """
 
-def RandomStringGenerator(l=12, a=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','0','1','2','3','4','5','6','7','8','9']):
-    p = 0
+#First of all: I like to find some comments when I see code.
+
+import random
+
+def RandomStringGenerator(c, a=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','0','1','2','3','4','5','6','7','8','9']):
     s = ''
-    while p<l:
-        import random
+    #here is better just to use a 'for loop'. 'While loops' can generate more problems.
+    for i in range(c):
+         #For me it is more correct to call a library at the beginning of the code, so you only call it once. I move 'random' to the first lines.
         s += random.choice(a)
-        p += 1
     return s
 
 def BatchStringGenerator(n, a=8, b=12):
@@ -21,7 +24,8 @@ def BatchStringGenerator(n, a=8, b=12):
     for i in range(n):
         c = None
         if a < b:
-            import random
+
+            #For me it is more correct to call a library at the beginning of the code, so you only call it once. I move 'random' to the first lines.
             c = random.choice(range(a, b))
         elif a == b:
             c = a
