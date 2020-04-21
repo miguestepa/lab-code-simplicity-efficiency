@@ -35,6 +35,7 @@ def BatchStringGenerator(n, a=8, b=12):
         r.append(RandomStringGenerator(c))
     return r
 
+# Since these are going to be the most important variables of this program, I prefer to see them at the beginning of the code, right after imported packages.
 a = input('Enter minimum string length: ')
 b = input('Enter maximum string length: ')
 n = input('How many random strings to generate? ')

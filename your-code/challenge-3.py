@@ -12,6 +12,8 @@ The following function shows one way to solve the problem but the code is not id
 Refactor the code based on what you have learned about code simplicity and efficiency.
 """
 
+# This can be written as a comprenehsive list
+
 def my_function(X):
     solutions = []
     for x in range(5, X):
@@ -25,6 +27,10 @@ def my_function(X):
             m = max(solution)
     return m
 
+# Some input control is needed to handle errors. Wont do it here but know it is needed.
 X = input("What is the maximal length of the triangle side? Enter a number: ")
 
+
+# This is something merely personal but I prefer to store solutions instead of directly calling them in the print function.
+# Doing so, it is easy to manage possible errors and develop new possible stuff.
 print("The longest side possible is " + str(my_function(int(X))))
